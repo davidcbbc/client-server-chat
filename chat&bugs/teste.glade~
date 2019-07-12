@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="home">
+    <property name="can_focus">False</property>
+    <property name="default_width">440</property>
+    <property name="default_height">250</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed_home">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="criar_sala">
+            <property name="label" translatable="yes">Criar sala</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Criar uma sala nova</property>
+            <signal name="clicked" handler="on_criar_sala_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">96</property>
+            <property name="y">164</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="entrar_sala">
+            <property name="label" translatable="yes">Entrar</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Entrar numa sala existente</property>
+            <signal name="clicked" handler="on_entrar_sala_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">386</property>
+            <property name="y">164</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="chat_bugs">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">CHAT &amp; BUGS</property>
+            <attributes>
+              <attribute name="font-desc" value="URW Bookman L Bold 10"/>
+              <attribute name="size" value="40000"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">86</property>
+            <property name="y">39</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry_escolha_sala">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="secondary_icon_stock">gtk-justify-fill</property>
+            <property name="secondary_icon_tooltip_text" translatable="yes">Escolhe o numero da sala</property>
+            <property name="input_purpose">digits</property>
+            <signal name="changed" handler="on_entry_escolha_sala_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">123</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_bemvindo">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Bem-Vindo ao </property>
+            <attributes>
+              <attribute name="font-desc" value="Ubuntu Mono Bold 10"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">234</property>
+            <property name="y">-1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_recebido">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">241</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_erro_connect">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <attributes>
+              <attribute name="font-desc" value="Ubuntu Mono Italic 10"/>
+              <attribute name="foreground" value="#efef29292929"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">169</property>
+            <property name="y">102</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_salas_on">
+            <property name="width_request">191</property>
+            <property name="height_request">145</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">
+</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans 10"/>
+              <attribute name="style" value="italic"/>
+              <attribute name="foreground" value="#4e4e9a9a0606"/>
+              <attribute name="background" value="#d3d3d7d7cfcf"/>
+              <attribute name="underline-color" value="#fcfce9e94f4f"/>
+              <attribute name="strikethrough-color" value="#adad7f7fa8a8"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">183</property>
+            <property name="y">210</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="salas_online_static">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Salas On-Line:</property>
+            <attributes>
+              <attribute name="font-desc" value="URW Palladio L Bold 10"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="background" value="#8a8ae2e23434"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">226</property>
+            <property name="y">149</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="sala_chat">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Chat&amp;Bugs</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed_salas">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="enviar_msg">
+            <property name="label" translatable="yes">Enviar</property>
+            <property name="width_request">80</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_enviar_msg_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">490</property>
+            <property name="y">334</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry_msg">
+            <property name="name">entry_msg</property>
+            <property name="width_request">491</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_entry_msg_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="y">334</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkViewport" id="view_port">
+            <property name="width_request">491</property>
+            <property name="height_request">317</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkTextView" id="text_view">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">1</property>
+            <property name="y">18</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_numero_sala">
+            <property name="width_request">492</property>
+            <property name="height_request">19</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Italic 10"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="background" value="#eeeeeeeeecec"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scroll2">
+            <property name="width_request">79</property>
+            <property name="height_request">317</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView" id="users_on">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">491</property>
+            <property name="y">18</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_users_on">
+            <property name="width_request">77</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">ONLINE</property>
+            <attributes>
+              <attribute name="font-desc" value="Ubuntu Medium 10"/>
+              <attribute name="foreground" value="#4e4e9a9a0606"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">493</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
